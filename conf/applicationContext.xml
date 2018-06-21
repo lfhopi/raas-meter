@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:context="http://www.springframework.org/schema/context"       
+    xsi:schemaLocation="http://www.springframework.org/schema/beans        
+    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context        
+    http://www.springframework.org/schema/context/spring-context-3.1.xsd">   
+    
+    <context:annotation-config /> <!-- 启用注解 -->
+	
+	<!--读取系统配置参数 -->
+	<context:property-placeholder location="file:conf/config.properties"/>
+	<!-- 生产环境用 
+	<context:property-placeholder location="../conf/config.properties"/>
+	-->
+	
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close"> 
+	    <property name="url" value="${jdbc.url}" />
+	    <property name="username" value="${jdbc.user}" />
+	    <property name="password" value="${jdbc.password}" />
+	    
+	    <!-- 配置初始化大小、最小、最大 -->
+	    <property name="maxActive" value="5" />
+	    <property name="initialSize" value="3" />
+	    <property name="minIdle" value="2" />
+	 	
+	 	<!-- 配置获取连接等待超时的时间 -->
+	 	<property name="maxWait" value="60000" />
+	 	
+	 	<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+	    <property name="timeBetweenEvictionRunsMillis" value="60000" />
+	    
+	    <!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+	    <property name="minEvictableIdleTimeMillis" value="300000" />
+	 	
+	    <property name="validationQuery" value="SELECT 'x'" />
+	    <property name="testWhileIdle" value="true" />
+	    <property name="testOnBorrow" value="false" />
+	    <property name="testOnReturn" value="false" />
+	    
+	    <property name="poolPreparedStatements" value="true" />
+	    <property name="maxPoolPreparedStatementPerConnectionSize" value="50" />
+	    
+	    <!-- 关闭长时间不使用的连接 -->
+        <property name="removeAbandoned" value="true" /> <!-- 打开removeAbandoned功能 -->
+        <property name="removeAbandonedTimeout" value="7200" /> <!-- 1200秒，也就是20分钟 -->
+        <property name="logAbandoned" value="true" /> <!-- 关闭abanded连接时输出错误日志 -->
+        
+	</bean>
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.connection.provider_class">org.hibernate.connection.ProxoolConnectionProvider</prop>
+				<prop key="hibernate.cache.use_query_cache">false</prop>
+				<prop key="hibernate.generate_statistics">false</prop>
+                <!-- 最优化二级缓存-->
+                <prop key="hibernate.cache.use_structured_entries">false</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.jdbc.fetch_size">50</prop>
+                <prop key="hibernate.jdbc.batch_size">50</prop>
+                
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>   
+                <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>   
+                <prop key="hibernate.cache.configurationResourceName">ehcache.xml</prop>
+                <!--此处要注意因为proxool自己释放数据库连接比慢,所以要在此给出释放连接的模式,具体几种模式对应的意思,可以Google一下hibernate.connection.release_mode,有很多说明,在此不多说-->  
+                <prop key="hibernate.connection.release_mode">after_statement</prop>
+			</props>
+		</property>
+		
+		<property name="mappingJarLocations">
+		    <list>
+			   <value>./lib/lspovo.jar</value>
+			</list> 
+		</property>
+	</bean>
+	
+	<!-- 事务 -->
+	<bean id="myTransactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 事务管理 -->
+	<bean id="txProxyTemplate" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<!-- 使用CGlib 如果代理的不是接口类 必须使用CGlib加proxyTargetClass=true-->
+		<property name="proxyTargetClass">
+			<value>true</value>
+		</property>
+		<property name="transactionManager">
+			<ref bean="myTransactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="send*">PROPAGATION_REQUIRED</prop>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="searchAndAdd*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="del*">PROPAGATION_REQUIRED</prop>
+				<prop key="check*">PROPAGATION_REQUIRED</prop>
+				<prop key="IsRegUser">PROPAGATION_REQUIRED</prop>
+				<prop key="SendSMS">PROPAGATION_REQUIRED</prop>
+				<prop key="ActivateUser">PROPAGATION_REQUIRED</prop>
+				<prop key="mobile*">PROPAGATION_REQUIRED</prop>
+				<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="meterDataDao" parent="txProxyTemplate">
+		<property name="target">
+			<bean class="com.beetech.meter.dao.hibernate.MeterDataDaoImpl">
+				<property name="sessionFactory" ref="sessionFactory"/>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<!-- <bean id="testService" class="com.beetech.service.TestService" init-method="init">
+		<property name="MeterService" ref="meterService"/>
+	</bean> -->
+	<import resource="applicationContext_quartz.xml"/>
+</beans>

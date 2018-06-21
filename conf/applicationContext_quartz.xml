@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="meterService" class="com.beetech.service.MeterService" init-method="init">
+		<property name="MeterDataDao" ref="meterDataDao"/>
+	</bean>
+	<bean id="workInvoke" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">
+			<ref bean="meterService"/>
+		</property>
+		<property name="targetMethod">
+			<value>mainService</value>
+		</property>
+		<!-- 是否允许任务并发执行。当值为false时，表示必须等到前一个线程处理完毕后才再启一个新的线程 -->
+    	<property name="concurrent" value="false" />
+	</bean>
+	
+	<bean id="simpleReportTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">   
+	    <property name="jobDetail">   
+	        <ref bean="workInvoke"/>   
+	    </property>   
+	    <property name="startDelay">   
+	        <value>1000</value>   
+	    </property>   
+	    <property name="repeatInterval" value="${pace}"> 
+	    </property>   
+	</bean>  
+
+	<bean id="startWork" lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+             <list>
+               	<ref bean="simpleReportTrigger"/>
+             </list>
+        </property>
+	</bean>
+</beans>

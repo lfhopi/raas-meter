@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/lib/antlr-2.7.5H3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/asm.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/cglib-2.1.3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/common-lang3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/commons-collections.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/commons-io-1.3.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/commons-logging-1.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/dom4j-1.6.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/druid-1.0.12.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/ehcache-1.2.3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/google-guava.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/hibernate3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/javassist-3.9.0.GA.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jmxri.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jmxtools.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/jta.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/log4j-1.2.15.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/mail.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/mysql-connector-java-5.1.5-bin.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/wrapper.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/com.springsource.org.aopalliance-1.0.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.aop-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.asm-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.beans-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.context-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.context.support-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.core-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.expression-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.jdbc-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.orm-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.transaction-3.1.1.RELEASE.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/mina_lib/backport-util-concurrent-2.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/mina_lib/commons-collections-3.2.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/mina_lib/commons-lang-2.4.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/mina_lib/xbean-spring.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/commons-beanutils-core.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/httpclient/httpclient-4.3.6.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/httpclient/httpcore-4.3.3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/json.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/commons-logging-1.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/fastjson-1.1.41.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/ezmorph-1.0.6.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/gson-2.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/hamcrest-core-1.3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/json_simple-1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/json-lib-2.4-jdk15.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/quartz-all-1.6.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/mina_lib/slf4j-api-1.6.4.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/mina_lib/slf4j-log4j12-1.6.4.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/lib/lspovo.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+      <src_folder value="file://$MODULE_DIR$/conf" expected_position="1" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/conf" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="antlr-2.7.5H3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/antlr-2.7.5H3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="asm.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/asm.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="cglib-2.1.3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/cglib-2.1.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="common-lang3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/common-lang3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-collections.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/commons-collections.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-io-1.3.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/commons-io-1.3.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-logging-1.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/commons-logging-1.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="dom4j-1.6.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/dom4j-1.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="druid-1.0.12.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/druid-1.0.12.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ehcache-1.2.3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/ehcache-1.2.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="google-guava.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/google-guava.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hibernate3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/hibernate3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javassist-3.9.0.GA.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/javassist-3.9.0.GA.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jmxri.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jmxri.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jmxtools.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jmxtools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jta.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/jta.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="log4j-1.2.15.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/log4j-1.2.15.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mail.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mail.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mysql-connector-java-5.1.5-bin.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mysql-connector-java-5.1.5-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="wrapper.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/wrapper.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="com.springsource.org.aopalliance-1.0.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/com.springsource.org.aopalliance-1.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.aop-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.aop-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.asm-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.asm-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.beans-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.beans-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.context-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.context-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.context.support-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.context.support-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.core-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.core-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.expression-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.expression-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.jdbc-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.jdbc-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.orm-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.orm-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.springframework.transaction-3.1.1.RELEASE.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/spring3.1/org.springframework.transaction-3.1.1.RELEASE.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="backport-util-concurrent-2.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mina_lib/backport-util-concurrent-2.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-collections-3.2.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mina_lib/commons-collections-3.2.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-lang-2.4.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mina_lib/commons-lang-2.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="xbean-spring.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mina_lib/xbean-spring.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-beanutils-core.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/commons-beanutils-core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpclient-4.3.6.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/httpclient/httpclient-4.3.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="httpcore-4.3.3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/httpclient/httpcore-4.3.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="json.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/json.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-logging-1.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/commons-logging-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="fastjson-1.1.41.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/fastjson-1.1.41.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ezmorph-1.0.6.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/ezmorph-1.0.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gson-2.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/gson-2.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hamcrest-core-1.3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/hamcrest-core-1.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="json_simple-1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/json_simple-1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="json-lib-2.4-jdk15.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/json-lib-2.4-jdk15.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="quartz-all-1.6.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/quartz-all-1.6.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="slf4j-api-1.6.4.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mina_lib/slf4j-api-1.6.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="slf4j-log4j12-1.6.4.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/mina_lib/slf4j-log4j12-1.6.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="lspovo.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/lspovo.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="inheritedJdk" />
+  </component>
+</module>
